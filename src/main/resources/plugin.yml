@@ -1,0 +1,4 @@
+name: PluginManager
+version: ${project.version}
+main: com.redblock6.pluginmanager.PluginManager
+authors: [ Redblock6 ]
