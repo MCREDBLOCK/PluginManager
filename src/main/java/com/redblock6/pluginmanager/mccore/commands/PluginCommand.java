@@ -12,9 +12,17 @@ public class PluginCommand implements Listener, CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
-            if (command.getName().equalsIgnoreCase("enable")) {
+            if (command.getName().equalsIgnoreCase("load")) {
                 if (((Player) sender).getPlayer().hasPermission("redblock.plugins")) {
-                    PluginManager.loadPlugin(args);
+                    PluginManager.loadPlugin(args[0]);
+                }
+            } else if (command.getName().equalsIgnoreCase("unload")) {
+                if (((Player) sender).getPlayer().hasPermission("redblock.plugins")) {
+                    PluginManager.disablePlugin(args[0]);
+                }
+            } if (command.getName().equalsIgnoreCase("reload")) {
+                if (((Player) sender).getPlayer().hasPermission("redblock.plugins")) {
+                    PluginManager.reloadPlugin(args[0]);
                 }
             }
         } else {

@@ -2,3 +2,15 @@ name: PluginManager
 version: ${project.version}
 main: com.redblock6.pluginmanager.PluginManager
 authors: [ Redblock6 ]
+
+commands:
+  load:
+    description: Loads a plugin
+  unload:
+    description: Unloads a plugin
+  reload:
+    description: Reloads a plugin
+
+permissions:
+  redblock.plugins:
+    description: Permission to everything.
